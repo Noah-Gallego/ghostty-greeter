@@ -1,0 +1,15 @@
+[package]
+name = "ghostty-greeter-mac"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "ghostty-greeter"
+path = "src/main.rs"
+
+[dependencies]
+chrono = "0.4.44"
+crossterm = "0.29.0"
+rand = "0.10.0"
+ratatui = "0.30.0"
+sysinfo = "0.38.4"
