@@ -10,8 +10,6 @@ path = "src/main.rs"
 [dependencies]
 chrono = "0.4.44"
 crossterm = "0.29.0"
-nvml-wrapper = "0.12.0"
 rand = "0.10.0"
 ratatui = "0.30.0"
 sysinfo = "0.38.4"
-tui-piechart = "0.3.1"
