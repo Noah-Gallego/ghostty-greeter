@@ -1,0 +1,18 @@
+# ble.sh — fish-like autosuggestions, syntax highlighting for bash
+[[ $- == *i* ]] && [[ -f ~/.local/share/blesh/ble.sh ]] && source ~/.local/share/blesh/ble.sh --noattach
+
+# autocomplete.sh — AI-powered suggestions (double-Tab ONLY)
+# Install to ~/.local/bin/autocomplete.sh and uncomment:
+# if [[ -f ~/.local/bin/autocomplete.sh ]]; then
+#     export ACSH_OPENAI_API_KEY="YOUR_API_KEY_HERE"
+#     export ACSH_OPENAI_ENDPOINT="https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+#     source ~/.local/bin/autocomplete.sh
+# fi
+
+# Ghostty greeter — runs once per interactive terminal
+if [ -n "$GHOSTTY_RESOURCES_DIR" ] && command -v ghostty-greeter &>/dev/null; then
+    ghostty-greeter
+fi
+
+# Attach ble.sh at the end (must be last)
+[[ ${BLE_VERSION-} ]] && ble-attach

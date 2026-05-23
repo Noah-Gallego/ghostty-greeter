@@ -1,0 +1,38 @@
+autoload -Uz compinit && compinit
+
+# OpenClaw Completion (install OpenClaw separately)
+# source "$HOME/.openclaw/completions/openclaw.zsh"
+
+# PATH
+export PATH="$HOME/.local/bin:$PATH"
+
+# sst (install separately if needed)
+# export PATH=$HOME/.sst/bin:$PATH
+
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# autocomplete.sh — AI-powered suggestions (double-Tab ONLY)
+# Install autocomplete.sh to ~/.local/bin/autocomplete.sh
+# Then add your API key below:
+# if [[ -f ~/.local/bin/autocomplete.sh ]]; then
+#     export ACSH_OPENAI_API_KEY="YOUR_API_KEY_HERE"
+#     export ACSH_OPENAI_ENDPOINT="https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+#     source ~/.local/bin/autocomplete.sh
+# fi
+
+# Ghostty greeter — runs once per interactive terminal
+if [ -n "$GHOSTTY_RESOURCES_DIR" ] && command -v ghostty-greeter &>/dev/null; then
+    ghostty-greeter
+fi
+
+# Quick system monitor alias
+alias top='btop'
+alias sys='btop'
+
+# Attach ble.sh at the end (must be last)
+[[ ${BLE_VERSION-} ]] && ble-attach

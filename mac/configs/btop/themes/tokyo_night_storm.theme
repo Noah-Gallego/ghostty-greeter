@@ -1,0 +1,73 @@
+#? Tokyo Night Storm Theme for btop
+# Matches Ghostty terminal Tokyo Night Storm theme
+# Based on https://github.com/folke/tokyonight.nvim
+
+# Backgrounds
+background=#1a1b26
+battery=#1a1b26
+
+# Window/Box styling
+main_bg=#1a1b26
+main_fg=#c0caf5
+title=#7aa2f7
+hi_fg=#7aa2f7
+selected_bg=#7aa2f7
+selected_fg=#1a1b26
+tab=#1a1b26
+cpu_box=#1a1b26
+mem_box=#1a1b26
+net_box=#1a1b26
+proc_box=#1a1b26
+div_line=#3b4261
+
+# Core colors (Tokyo Night Storm palette)
+base=#24283b
+surface0=#1f2335
+surface1=#24283b
+surface2=#414868
+overlay0=#565f89
+overlay1=#565f89
+overlay2=#7aa2f7
+blue=#7aa2f7
+sky=#7dcfff
+cyan=#7dcfff
+teal=#7aa2f7
+green=#9ece6a
+magenta=#bb9af7
+orange=#ff9e64
+red=#f7768e
+text=#c0caf5
+subtext0=#a9b1d6
+subtext1=#9aa5ce
+warning=#e0af68
+error=#f7768e
+critical=#db4b4b
+
+# CPU graph colors
+cpu_med=#9ece6a
+cpu_high=#7aa2f7
+
+# Process list gradients
+proc_start=#9ece6a
+proc_end=#7aa2f7
+proc_gradient=true
+
+# Process tree colors
+proc_tree=#7aa2f7
+
+# Memory colors
+mem_free=#9aa5ce
+mem_cache=#565f89
+mem_used=#7aa2f7
+mem_available=#9ece6a
+
+# Network graph colors
+net_recv=#7aa2f7
+net_sent=#9ece6a
+net_recv_bg=#1a1b26
+net_sent_bg=#1a1b26
+
+# Disk colors (Tokyo palette)
+disk_free=#9aa5ce
+disk_used=#7aa2f7
+disk_io=#9ece6a

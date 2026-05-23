@@ -1,0 +1,28 @@
+# Theme
+theme = TokyoNight Storm
+
+# Font
+font-family = JetBrains Mono
+font-size = 13
+
+# Window padding for breathing room
+window-padding-x = 12
+window-padding-y = 8
+window-padding-balance = true
+
+# Cursor
+cursor-style = bar
+cursor-style-blink = true
+
+# Background transparency (slight)
+background-opacity = 0.93
+
+# Window
+window-width = 120
+window-height = 36
+window-decoration = auto
+confirm-close-surface = false
+
+# Misc
+copy-on-select = clipboard
+mouse-hide-while-typing = true

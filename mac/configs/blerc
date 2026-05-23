@@ -1,0 +1,25 @@
+# Autosuggestions: show from history, accept with right arrow
+bleopt complete_auto_delay=300
+bleopt complete_auto_complete=1
+bleopt complete_ambiguous=
+
+# Compact completion menu
+bleopt complete_menu_style=dense
+bleopt complete_menu_maxlines=8
+
+# Subtle suggestion color
+ble-face auto_complete='fg=240'
+
+# Syntax highlighting (Tokyo Night inspired)
+ble-face syntax_default='fg=189'
+ble-face syntax_command='fg=114'
+ble-face syntax_error='fg=204'
+ble-face syntax_quoted='fg=180'
+ble-face syntax_comment='fg=103'
+
+# No bells
+bleopt edit_abell=
+bleopt edit_vbell=
+
+# Share history across terminals
+bleopt history_share=1

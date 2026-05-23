@@ -19,19 +19,18 @@ A ratatui-based TUI greeter for the [Ghostty](https://ghostty.org) terminal. Lau
 | `mac/` | macOS (Apple Silicon) |  Apple | `system_profiler` for chip info |
 | `ubuntu/` | Ubuntu / Linux |  Linux | NVIDIA GPU via `nvidia-smi` |
 
-## Quick Start
+## One-Line Install
 
 ```bash
-# Clone the repo
+curl -fsSL https://raw.githubusercontent.com/Noah-Gallego/ghostty-greeter/master/install.sh | bash
+```
+
+Or clone and run manually:
+
+```bash
 git clone https://github.com/Noah-Gallego/ghostty-greeter.git
 cd ghostty-greeter
-
-# Run the setup for your platform
-# macOS:
-cd mac && bash setup.sh
-
-# Ubuntu/Linux:
-cd ubuntu && bash setup.sh
+bash install.sh
 ```
 
 The setup script handles everything:
@@ -41,7 +40,7 @@ The setup script handles everything:
 - Installs **btop** with a custom Tokyo Night Storm theme
 - Installs **ble.sh** (fish-like syntax highlighting + autosuggestions)
 - Installs **bat** (syntax-highlighted `cat`), **eza** (modern `ls`), **delta** (beautiful git diffs)
-- Sets up a git-aware Tokyo Night bash prompt
+- Sets up zsh & bash configs with the greeter auto-launch
 - Wires the greeter to auto-launch in Ghostty
 
 ## Controls
@@ -55,7 +54,8 @@ The setup script handles everything:
 ## What the Setup Gives You
 
 - **Syntax highlighting** in your shell via ble.sh (Tokyo Night colors)
-- **Git-aware prompt** showing branch + dirty/staged state
+- **Ghostty greeter** on every new terminal window
+- **btop** system monitor with Tokyo Night Storm theme
 - **`cat` → `bat`** with syntax highlighting
 - **`ls` → `eza`** with icons and color
 - **`git diff` → `delta`** with side-by-side, line numbers, Tokyo Night colors
