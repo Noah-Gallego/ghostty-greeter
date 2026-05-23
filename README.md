@@ -1,31 +1,152 @@
-# Ghostty Greeter
+<div align="center">
 
-A ratatui-based TUI greeter for the [Ghostty](https://ghostty.org) terminal. Launches with a glitch animation splash screen, then drops you into [btop](https://github.com/aristocratos/btop) for system monitoring or your shell.
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  ASCII HEADER                                                -->
+<!-- ═══════════════════════════════════════════════════════════ -->
 
-![Tokyo Night Storm themed](https://img.shields.io/badge/theme-Tokyo%20Night%20Storm-7aa2f7)
+<pre style="color: #7aa2f7;">
+╔═══════════════════════════════════════════════════════════════╗
+║                                                               ║
+║   ██████╗  ██╗  ██╗ ██████╗ ███████╗████████╗████████╗██╗   ║
+║  ██╔════╝  ██║  ██║██╔═══██╗██╔════╝╚══██╔══╝╚══██╔══╝██║   ║
+║  ██║  ███╗ ███████║██║   ██║███████╗   ██║      ██║   ██║   ║
+║  ██║   ██║ ██╔══██║██║   ██║╚════██║   ██║      ██║   ██║   ║
+║  ╚██████╔╝ ██║  ██║╚██████╔╝███████║   ██║      ██║   ██║   ║
+║   ╚═════╝  ╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝      ╚═╝   ╚═╝   ║
+║                                                               ║
+║           <b>TUI Greeter for Ghostty</b>                         ║
+║                                                               ║
+╚═══════════════════════════════════════════════════════════════╝
+</pre>
 
-## Features
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  BADGES                                                      -->
+<!-- ═══════════════════════════════════════════════════════════ -->
 
-- **Glitch animation** splash screen with ASCII art name reveal
-- **Nerd Font icons** — system info strip with CPU, RAM, disk, date
-- **btop integration** — press Space to launch a fully themed btop session, Esc returns to greeter
-- **Tokyo Night Storm** color scheme throughout (Ghostty, btop, greeter)
-- **One-command setup** installs everything: Ghostty config, fonts, CLI tools, syntax highlighting
+[![Rust](https://img.shields.io/badge/Rust-000?logo=rust&logoColor=white&style=flat-square)](https://www.rust-lang.org)
+[![License](https://img.shields.io/badge/License-MIT-7aa2f7?style=flat-square)](LICENSE)
+[![macOS](https://img.shields.io/badge/macOS-supported-9ece6a?style=flat-square&logo=apple&logoColor=white)](mac/)
+[![Linux](https://img.shields.io/badge/Linux-supported-e0af68?style=flat-square&logo=linux&logoColor=white)](ubuntu/)
+[![Tokyo Night](https://img.shields.io/badge/theme-Tokyo%20Night%20Storm-7aa2f7?style=flat-square)](https://github.com/folke/tokyonight.nvim)
 
-## Platforms
+<br>
 
-| Directory | Target | OS Icon | Notes |
-|-----------|--------|---------|-------|
-| `mac/` | macOS (Apple Silicon) |  Apple | `system_profiler` for chip info |
-| `ubuntu/` | Ubuntu / Linux |  Linux | NVIDIA GPU via `nvidia-smi` |
+**A glitch-animated terminal greeter that launches btop, ble.sh syntax highlighting,**  
+**and a fully themed Tokyo Night Storm environment — in one command.**
 
-## One-Line Install
+<br>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  ONE-LINE INSTALL  (THE MONEY SHOT)                          -->
+<!-- ═══════════════════════════════════════════════════════════ -->
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Noah-Gallego/ghostty-greeter/master/install.sh | bash
 ```
 
-Or clone and run manually:
+<sub>Or clone manually → see [Quick Start](#quick-start) below</sub>
+
+<br>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  DEMO  (ASCII VISUAL)                                        -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+## 🎥 What It Looks Like
+
+```text
+┌───────────────────────────────────────────────────────────────────────┐
+│                                                               │
+│     ▓▓░░█▒ NOAH   ██░▒▓  │  ← glitch decode in ~2.8s     │
+│     ░▒█░██▓░██▒░███  ▒░▓│                               │
+│     ▒▒▒░█░▓██░░▒████  ░▒│                               │
+│                                                               │
+│     ██░▒ GALLEGO  ▓▒█░░▓▒▒│  ← second wave decode            │
+│     ▓░█░██▒▓█░░▒▒██  ░▒█│                               │
+│     ░▒░█░▒█░░▓▒██████▒░│                               │
+│                                                               │
+│         "Golden hour coding."   █  ← time-of-day greeting         │
+│                                                               │
+│     Mon 23 Jun 14:32    Mac.local   M4 (10t)  📜 36 GB  💾 994 GB  │
+│                                                               │
+│              ⏎ Enter    continue                              │
+│              ♥ Space    system health  → btop                  │
+│                                                               │
+└───────────────────────────────────────────────────────────────────────┘
+```
+
+> **💡 Press `Enter`** → drops into a themed shell  
+> **💡 Press `Space`** → launches **btop** with Tokyo Night Storm theme  
+> **💡 Press `Esc` / `q`** → back to greeter (or quit)
+
+<br>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  FEATURE GRID                                                -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+## ⚡ Features
+
+<table>
+<tr>
+<td width="33%" valign="top">
+
+### 🎨 Glitch Animation
+A terminal boot sequence that decodes your name from noise — like a sci-fi movie intro, but it's your terminal.
+
+</td>
+<td width="33%" valign="top">
+
+### 🤖 Nerd Font Icons
+CPU, RAM, disk, and date — all rendered with actual icons thanks to JetBrains Mono Nerd Font.
+
+</td>
+<td width="33%" valign="top">
+
+### 📊 btop Integration
+Press `Space` and you're in a fully themed system monitor. Press `Esc` and you're back at the greeter.
+
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+
+### 🔘 Tokyo Night Storm
+Every tool — Ghostty, btop, ble.sh, bat, eza, delta — shares one cohesive dark color palette.
+
+</td>
+<td width="33%" valign="top">
+
+### 💾 ble.sh Syntax Highlight
+Fish-like autosuggestions + real-time syntax highlighting in bash/zsh. No config needed.
+
+</td>
+<td width="33%" valign="top">
+
+### 🚀 One-Command Setup
+Clone, run `bash install.sh`, and your entire terminal environment is replicated. Backups included.
+
+</td>
+</tr>
+</table>
+
+<br>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  QUICK START                                                 -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+## 🚀 Quick Start
+
+### Option A: One-Liner (fastest)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Noah-Gallego/ghostty-greeter/master/install.sh | bash
+```
+
+### Option B: Clone + Run
 
 ```bash
 git clone https://github.com/Noah-Gallego/ghostty-greeter.git
@@ -33,30 +154,141 @@ cd ghostty-greeter
 bash install.sh
 ```
 
-The setup script handles everything:
-- Installs Rust, Ghostty, JetBrains Mono Nerd Font
-- Builds the greeter binary
-- Configures Ghostty with Tokyo Night Storm theme
-- Installs **btop** with a custom Tokyo Night Storm theme
-- Installs **ble.sh** (fish-like syntax highlighting + autosuggestions)
-- Installs **bat** (syntax-highlighted `cat`), **eza** (modern `ls`), **delta** (beautiful git diffs)
-- Sets up zsh & bash configs with the greeter auto-launch
-- Wires the greeter to auto-launch in Ghostty
+### What Gets Installed
 
-## Controls
+| Tool | Purpose |
+|------|---------|
+| [Ghostty](https://ghostty.org) | GPU-accelerated terminal emulator |
+| `ghostty-greeter` | This TUI binary (Rust + ratatui) |
+| [btop](https://github.com/aristocratos/btop) | System resource monitor |
+| [ble.sh](https://github.com/akinomyoga/ble.sh) | Bash syntax highlighting & autosuggestions |
+| [bat](https://github.com/sharkdp/bat) | Syntax-highlighted `cat` |
+| [eza](https://github.com/eza-community/eza) | Modern `ls` with icons & git status |
+| [delta](https://github.com/dandavison/delta) | Beautiful git diffs |
+| JetBrains Mono Nerd Font | Terminal font with thousands of icons |
+
+> **✅ Safe to re-run.** The installer is idempotent — it checks what's already installed, backs up existing configs, and only changes what it needs to.
+
+<br>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  PLATFORM MATRIX                                             -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+## 💻 Platforms
+
+| Platform | Directory | Install Command | Notes |
+|----------|-----------|-----------------|-------|
+| **macOS** (Apple Silicon) | [`mac/`](mac/) | `cd mac && bash setup.sh` | `system_profiler` for chip info |
+| **Ubuntu / Linux** | [`ubuntu/`](ubuntu/) | `cd ubuntu && bash setup.sh` | NVIDIA GPU via `nvidia-smi` |
+
+> Want to add Windows/WSL? The greeter is Rust — cross-compiling is straightforward. PRs welcome!
+
+<br>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  THEME PREVIEW                                               -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+## 🎨 The Full Tokyo Night Storm Stack
+
+Everything shares one palette. No jarring color clashes when you switch between tools.
+
+```text
+┌───────────────────────────────────────────────────────────────────────┐
+│  🎭 Ghostty   │  #1a1b26 background  │  #7aa2f7 blue accent      │
+│  📊 btop      │  #c0caf5 foreground  │  #9ece6a green success    │
+│  ✍️  ble.sh    │  #f7768e error red    │  #bb9af7 magenta magic    │
+│  📖 bat       │  #e0af68 warning      │  #7dcfff cyan info        │
+│  📂 eza       │  #ff9e64 orange       │  transparent 0.93 bg     │
+└───────────────────────────────────────────────────────────────────────┘
+```
+
+<br>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  CONTROLS                                                    -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+## 🎮 Controls
 
 | Key | Action |
 |-----|--------|
 | `Enter` | Continue to shell |
-| `Space` | Open btop system monitor |
-| `Esc` / `q` | Back / quit |
+| `Space` | Launch **btop** system monitor |
+| `Esc` / `q` | Back to greeter (from btop) or quit |
 
-## What the Setup Gives You
+<br>
 
-- **Syntax highlighting** in your shell via ble.sh (Tokyo Night colors)
-- **Ghostty greeter** on every new terminal window
-- **btop** system monitor with Tokyo Night Storm theme
-- **`cat` → `bat`** with syntax highlighting
-- **`ls` → `eza`** with icons and color
-- **`git diff` → `delta`** with side-by-side, line numbers, Tokyo Night colors
-- All colors matched to the **Tokyo Night Storm** palette
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  WHAT YOU GET (SHELL LIFE)                                   -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+## 💰 What The Setup Gives You
+
+Your shell becomes a fully themed development environment:
+
+- **📝 Syntax highlighting** — ble.sh colors commands, strings, errors, variables in real time
+- **🔍 Fish-like autosuggestions** — grayed-out completions from history, accept with → Right Arrow
+- **🐱 `cat` → `bat`** — syntax-highlighted file previews with line numbers
+- **📂 `ls` → `eza`** — icons, git status, tree view, grouped directories
+- **📉 `git diff` → `delta`** — side-by-side diffs with line numbers and Tokyo Night colors
+- **🎭 Greeter on every new Ghostty window** — never a boring terminal again
+
+<br>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  REPO STRUCTURE                                              -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+## 📦 Repo Structure
+
+```
+ghostty-greeter/
+├── install.sh              └─ one-liner entry point (auto-detects OS)
+├── README.md               └─ this file
+├── mac/
+│   ├── setup.sh            └─ macOS setup script
+│   ├── src/main.rs         └─ greeter source (ratatui)
+│   ├── Cargo.toml          └─ Rust manifest
+│   └── configs/            └─ dotfiles that get copied to ~/
+│       ├── ghostty/config
+│       ├── zshrc
+│       ├── bashrc
+│       ├── blerc
+│       └── btop/
+└── ubuntu/
+    ├── setup.sh            └─ Ubuntu/Linux setup script
+    ├── src/main.rs         └─ greeter source
+    ├── Cargo.toml          └─ Rust manifest
+    └── configs/            └─ Linux dotfiles
+```
+
+<br>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  BUILT WITH                                                  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+## 🛠️ Built With
+
+<p>
+  <a href="https://www.rust-lang.org"><img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white" height="24"></a>
+  <a href="https://ratatui.rs"><img src="https://img.shields.io/badge/ratatui-000000?style=for-the-badge&logo=rust&logoColor=white" height="24"></a>
+  <a href="https://ghostty.org"><img src="https://img.shields.io/badge/Ghostty-1a1b26?style=for-the-badge&logo=ghostty&logoColor=white" height="24"></a>
+  <a href="https://github.com/folke/tokyonight.nvim"><img src="https://img.shields.io/badge/Tokyo%20Night%20Storm-1a1b26?style=for-the-badge" height="24"></a>
+</p>
+
+<br>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  FOOTER                                                      -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<div align="center">
+
+**Made with ♥ by [Noah Gallego](https://github.com/Noah-Gallego)**
+
+<sub>If this makes your terminal cooler, drop a ⭐ on the repo.</sub>
+
+</div>
