@@ -2,6 +2,10 @@
 
 A Rust terminal greeter and shell environment setup for Ghostty on macOS and Ubuntu/Linux.
 
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=rust,apple,linux&theme=light" alt="Rust, macOS, and Linux" />
+</p>
+
 ## Overview
 
 The installer configures Ghostty, builds a Ratatui-based greeter, and sets up a themed terminal workflow with btop, ble.sh, shell configuration, and optional AI command suggestions.
