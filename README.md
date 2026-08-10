@@ -53,6 +53,10 @@ The platform directories contain Ghostty, btop, ble.sh, and shell configuration 
 
 The supported paths are macOS and Ubuntu/Linux. The setup scripts modify user-level shell and terminal configuration and may install packages, fonts, Rust, Ghostty, and other command-line tools.
 
+## Preview / Media
+
+No project screenshot or other honest visual preview is present in the tracked files; this repository is a terminal TUI and setup-script project.
+
 ## License
 
 MIT
