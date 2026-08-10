@@ -20,21 +20,6 @@ The installer configures Ghostty, builds a Ratatui-based greeter, and sets up a 
 - Optional `autocomplete.sh` integration for double-Tab AI suggestions
 - Safe macOS config backups before replacement
 
-## Tech stack
-
-- Rust 2024 edition
-- Ratatui, Crossterm, Chrono, Rand, and Sysinfo
-- Bash setup scripts
-- Separate `mac/` and `ubuntu/` Cargo projects
-
-### Important libraries
-
-- `ratatui`
-- `crossterm`
-- `chrono`
-- `rand`
-- `sysinfo`
-
 ## Installation
 
 The repository installer detects macOS or Linux and delegates to the platform-specific setup:
