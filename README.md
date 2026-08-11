@@ -2,6 +2,10 @@
 
 A Rust terminal greeter and shell environment setup for Ghostty on macOS and Ubuntu/Linux.
 
+> [!IMPORTANT]
+> `install.sh` modifies user-level terminal and shell configuration; review the platform scripts and back up any custom settings before running it.
+
+
 <p align="center">
   <img src="https://skillicons.dev/icons?i=rust,apple,linux&theme=light" alt="Rust, macOS, and Linux" />
 </p>
@@ -45,3 +49,13 @@ No project screenshot or other honest visual preview is present in the tracked f
 ## License
 
 MIT
+
+## Installation flow
+
+```mermaid
+flowchart LR
+    A[install.sh] --> B{macOS or Linux}
+    B --> C[Platform setup script]
+    C --> D[Rust greeter and terminal configuration]
+    D --> E[Interactive Ghostty shell]
+```
